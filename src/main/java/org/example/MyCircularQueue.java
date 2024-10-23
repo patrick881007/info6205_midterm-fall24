@@ -25,7 +25,9 @@ public class MyCircularQueue {
     }
 
     public boolean enQueue(int value) {
-        this.head = new Node(value);
+        Node newNode = new Node(value);
+        newNode.rear = head;
+        head = newNode;
         
         throw new UnsupportedOperationException("Not implemented yet");        
     }
