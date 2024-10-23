@@ -1,15 +1,37 @@
 package org.example;
 
+import java.lang.classfile.components.ClassPrinter.Node;
+
 public class MyCircularQueue {
+
+    int num;
+    Node head;
+
+    static class Node{
+        int value;
+        Node front;
+        Node rear;
+
+        Node(int value){
+            this.value = value;
+            this.front = null;
+            this.rear = null;
+        }
+    }
     public MyCircularQueue(int k) {
+        this.num = k;  
+        this.head = null;
         throw new UnsupportedOperationException("Not implemented yet");
     }
 
     public boolean enQueue(int value) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        this.head = new Node(value);
+        
+        throw new UnsupportedOperationException("Not implemented yet");        
     }
 
     public boolean deQueue() {
+
         throw new UnsupportedOperationException("Not implemented yet");
     }
 
